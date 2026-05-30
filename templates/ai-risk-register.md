@@ -176,6 +176,51 @@ The risk register should identify the primary risks associated with the AI syste
     <td>Enter low, moderate, high, or critical.<br><br></td>
     <td>Enter owner.<br><br></td>
   </tr>
+  <tr>
+    <td>AI-R-011</td>
+    <td>Training data provenance</td>
+    <td>Training data may be drawn from poorly documented, unaudited, unauthorized, or tampered sources, limiting the organization’s ability to assess legal, privacy, security, integrity, or suitability risk.</td>
+    <td>Enter low, moderate, high, or critical.<br><br></td>
+    <td>Enter low, moderate, high, or critical.<br><br></td>
+    <td>Enter low, moderate, high, or critical.<br><br></td>
+    <td>Enter owner.<br><br></td>
+  </tr>
+  <tr>
+    <td>AI-R-012</td>
+    <td>Embedded sensitive data</td>
+    <td>Personal information, secrets, credentials, proprietary information, regulated data, or security-sensitive content may be present in training data, fine-tuning data, model behavior, or model outputs and may not be reliably removable after deployment.</td>
+    <td>Enter low, moderate, high, or critical.<br><br></td>
+    <td>Enter low, moderate, high, or critical.<br><br></td>
+    <td>Enter low, moderate, high, or critical.<br><br></td>
+    <td>Enter owner.<br><br></td>
+  </tr>
+  <tr>
+    <td>AI-R-013</td>
+    <td>Model modification</td>
+    <td>Quantization, compression, fine-tuning, federated learning, retrieval augmentation, alignment changes, or other model-building decisions may alter model behavior, safety characteristics, security posture, or evaluation validity without adequate documentation.</td>
+    <td>Enter low, moderate, high, or critical.<br><br></td>
+    <td>Enter low, moderate, high, or critical.<br><br></td>
+    <td>Enter low, moderate, high, or critical.<br><br></td>
+    <td>Enter owner.<br><br></td>
+  </tr>
+  <tr>
+    <td>AI-R-014</td>
+    <td>Inherited model risk</td>
+    <td>Fine-tuned, adapted, or vendor-provided models may inherit unknown risks from base models, including data exposure, unsafe behavior, alignment weaknesses, susceptibility to prompt injection, or undocumented training data issues.</td>
+    <td>Enter low, moderate, high, or critical.<br><br></td>
+    <td>Enter low, moderate, high, or critical.<br><br></td>
+    <td>Enter low, moderate, high, or critical.<br><br></td>
+    <td>Enter owner.<br><br></td>
+  </tr>
+  <tr>
+    <td>AI-R-015</td>
+    <td>Model opacity</td>
+    <td>Model weights, learned representations, and emergent behavior may not be directly auditable, limiting security and governance review to documentation, behavioral testing, sampling, monitoring, and vendor-provided assurances.</td>
+    <td>Enter low, moderate, high, or critical.<br><br></td>
+    <td>Enter low, moderate, high, or critical.<br><br></td>
+    <td>Enter low, moderate, high, or critical.<br><br></td>
+    <td>Enter owner.<br><br></td>
+  </tr>
 </table>
 
 ## 4. Detailed Risk Treatment
@@ -232,20 +277,84 @@ Each material risk should have a documented treatment plan. Treatment may includ
     <td>Open, in progress, accepted, mitigated, transferred, avoided, or closed.<br><br></td>
   </tr>
   <tr>
-    <td>Enter risk ID</td>
-    <td>Document current controls.<br><br></td>
-    <td>Document additional treatment.<br><br></td>
+    <td>AI-R-006</td>
+    <td>Document current controls, such as tool allowlisting, role-based permissions, human approval gates, action limits, audit logging, or separation between advisory and action-taking workflows.<br><br></td>
+    <td>Document additional actions, such as reducing tool permissions, adding approval checkpoints, requiring transaction review, limiting autonomous actions, or testing misuse scenarios.<br><br></td>
     <td>Enter remaining risk level.<br><br></td>
     <td>Enter target date.<br><br></td>
-    <td>Enter status.<br><br></td>
+    <td>Open, in progress, accepted, mitigated, transferred, avoided, or closed.<br><br></td>
   </tr>
   <tr>
-    <td>Enter risk ID</td>
-    <td>Document current controls.<br><br></td>
-    <td>Document additional treatment.<br><br></td>
+    <td>AI-R-007</td>
+    <td>Document current controls, such as output review, prohibited use guidance, content filters, user training, escalation procedures, or legal and communications review for external outputs.<br><br></td>
+    <td>Document additional actions, such as requiring human approval for high-impact content, expanding testing, adding disclaimers, restricting output categories, or strengthening escalation paths.<br><br></td>
     <td>Enter remaining risk level.<br><br></td>
     <td>Enter target date.<br><br></td>
-    <td>Enter status.<br><br></td>
+    <td>Open, in progress, accepted, mitigated, transferred, avoided, or closed.<br><br></td>
+  </tr>
+  <tr>
+    <td>AI-R-008</td>
+    <td>Document current controls, such as logging scope limits, retention schedules, access controls, encryption, privacy review, records management review, or log redaction.<br><br></td>
+    <td>Document additional actions, such as reducing log retention, masking sensitive content, restricting log access, adding audit review, or confirming contractual retention requirements.<br><br></td>
+    <td>Enter remaining risk level.<br><br></td>
+    <td>Enter target date.<br><br></td>
+    <td>Open, in progress, accepted, mitigated, transferred, avoided, or closed.<br><br></td>
+  </tr>
+  <tr>
+    <td>AI-R-009</td>
+    <td>Document current controls, such as vendor review, contract terms, service availability commitments, audit rights, data export options, or business continuity planning.<br><br></td>
+    <td>Document additional actions, such as requiring exit planning, alternate provider review, stronger contractual protections, continuity testing, or periodic vendor reassessment.<br><br></td>
+    <td>Enter remaining risk level.<br><br></td>
+    <td>Enter target date.<br><br></td>
+    <td>Open, in progress, accepted, mitigated, transferred, avoided, or closed.<br><br></td>
+  </tr>
+  <tr>
+    <td>AI-R-010</td>
+    <td>Document current controls, such as model evaluation, test cases, benchmark results, human review, limited pilot deployment, monitoring, or documented limitations.<br><br></td>
+    <td>Document additional actions, such as expanding evaluation coverage, testing misuse scenarios, adding fairness or robustness review, documenting acceptance criteria, or requiring re-evaluation before production use.<br><br></td>
+    <td>Enter remaining risk level.<br><br></td>
+    <td>Enter target date.<br><br></td>
+    <td>Open, in progress, accepted, mitigated, transferred, avoided, or closed.<br><br></td>
+  </tr>
+  <tr>
+    <td>AI-R-011</td>
+    <td>Document current controls, such as model card review, vendor documentation, data provenance statements, dataset summaries, data source restrictions, or contractual representations about training data.<br><br></td>
+    <td>Document additional actions, such as requiring a model supply chain review, requesting training data disclosures, reviewing provenance gaps, limiting approved use, or escalating unknown data origin risks.<br><br></td>
+    <td>Enter remaining risk level.<br><br></td>
+    <td>Enter target date.<br><br></td>
+    <td>Open, in progress, accepted, mitigated, transferred, avoided, or closed.<br><br></td>
+  </tr>
+  <tr>
+    <td>AI-R-012</td>
+    <td>Document current controls, such as vendor training opt-out terms, secret scanning, data loss prevention, prompt restrictions, output monitoring, privacy review, or prohibited data guidance.<br><br></td>
+    <td>Document additional actions, such as requiring evidence of data filtering, credential exposure testing, privacy assessment, output leakage testing, contractual limits, or restricted deployment scope.<br><br></td>
+    <td>Enter remaining risk level.<br><br></td>
+    <td>Enter target date.<br><br></td>
+    <td>Open, in progress, accepted, mitigated, transferred, avoided, or closed.<br><br></td>
+  </tr>
+  <tr>
+    <td>AI-R-013</td>
+    <td>Document current controls, such as model version tracking, fine-tuning records, quantization notes, evaluation results, change management, or vendor release documentation.<br><br></td>
+    <td>Document additional actions, such as requiring pre- and post-modification evaluation, security regression testing, documentation of optimization trade-offs, or reapproval after material model changes.<br><br></td>
+    <td>Enter remaining risk level.<br><br></td>
+    <td>Enter target date.<br><br></td>
+    <td>Open, in progress, accepted, mitigated, transferred, avoided, or closed.<br><br></td>
+  </tr>
+  <tr>
+    <td>AI-R-014</td>
+    <td>Document current controls, such as base model documentation, fine-tuning dataset review, model card review, vendor attestations, evaluation results, or known limitation statements.<br><br></td>
+    <td>Document additional actions, such as testing fine-tuned model behavior against base model behavior, reviewing inherited risks, restricting high-impact use, or requiring additional misuse and prompt injection testing.<br><br></td>
+    <td>Enter remaining risk level.<br><br></td>
+    <td>Enter target date.<br><br></td>
+    <td>Open, in progress, accepted, mitigated, transferred, avoided, or closed.<br><br></td>
+  </tr>
+  <tr>
+    <td>AI-R-015</td>
+    <td>Document current controls, such as behavioral testing, model evaluation, monitoring, model card review, vendor documentation, audit logs, or human review requirements.<br><br></td>
+    <td>Document additional actions, such as expanding evaluation coverage, documenting testing limits, requiring monitoring thresholds, adding periodic reassessment, or limiting use where unverifiable behavior creates unacceptable risk.<br><br></td>
+    <td>Enter remaining risk level.<br><br></td>
+    <td>Enter target date.<br><br></td>
+    <td>Open, in progress, accepted, mitigated, transferred, avoided, or closed.<br><br></td>
   </tr>
 </table>
 
@@ -297,11 +406,74 @@ This section should identify how the risks and treatments align to governance, s
     <td>Source inventory, access review, content refresh record, retrieval test results</td>
   </tr>
   <tr>
-    <td>Enter risk ID</td>
-    <td>Enter the control objective for the risk.</td>
-    <td>Enter the relevant framework, standard, or internal policy.</td>
-    <td>Enter the mapped control area.</td>
-    <td>Enter the evidence expected for review or audit.</td>
+    <td>AI-R-006</td>
+    <td>Limit the ability of AI-enabled systems to take unintended or unauthorized actions through tools, permissions, APIs, or workflow integrations.</td>
+    <td>NIST AI RMF, NIST SP 800-53, OWASP LLM Top 10, internal access control policy</td>
+    <td>Access control, least privilege, tool governance, human approval, audit logging</td>
+    <td>Tool inventory, permission review, approval workflow, audit logs, misuse test results</td>
+  </tr>
+  <tr>
+    <td>AI-R-007</td>
+    <td>Reduce the likelihood and impact of harmful, misleading, biased, unauthorized, or inappropriate AI-generated outputs.</td>
+    <td>NIST AI RMF, internal content governance policy, legal and compliance requirements</td>
+    <td>Output review, content governance, human oversight, legal review, user training</td>
+    <td>Output review procedure, user guidance, test results, escalation record, approval conditions</td>
+  </tr>
+  <tr>
+    <td>AI-R-008</td>
+    <td>Ensure prompts, outputs, retrieved content, user activity, and tool calls are logged, retained, protected, and deleted according to approved requirements.</td>
+    <td>NIST AI RMF, NIST SP 800-53, FedRAMP-style controls, privacy and records policies</td>
+    <td>Audit logging, privacy, records management, retention, access control</td>
+    <td>Logging configuration, retention schedule, privacy review, access review, records decision</td>
+  </tr>
+  <tr>
+    <td>AI-R-009</td>
+    <td>Manage dependence on vendor-controlled AI capabilities through transparency, contractual protections, continuity planning, and exit options.</td>
+    <td>NIST AI RMF, NIST SP 800-53, FedRAMP-style controls, vendor risk management</td>
+    <td>Vendor risk, supply chain, business continuity, auditability, contractual assurance</td>
+    <td>Vendor review, contract terms, continuity plan, data export procedure, reassessment record</td>
+  </tr>
+  <tr>
+    <td>AI-R-010</td>
+    <td>Confirm that AI systems are evaluated against their intended use, misuse risks, operational limits, and acceptance criteria before approval.</td>
+    <td>NIST AI RMF, OWASP LLM Top 10, internal AI governance policy</td>
+    <td>Model evaluation, robustness, misuse testing, fitness for use, monitoring</td>
+    <td>Evaluation report, test cases, benchmark results, approval criteria, monitoring plan</td>
+  </tr>
+  <tr>
+    <td>AI-R-011</td>
+    <td>Document what is known, unknown, or unverifiable about training data provenance and data source integrity.</td>
+    <td>NIST AI RMF, NIST SP 800-53, FedRAMP-style controls, internal data governance policy</td>
+    <td>Data governance, supply chain risk, provenance, integrity, vendor assurance</td>
+    <td>Model card, vendor documentation, data provenance review, supplier attestation, approved use limitations</td>
+  </tr>
+  <tr>
+    <td>AI-R-012</td>
+    <td>Reduce the likelihood that sensitive information, credentials, or regulated data are present in model behavior, prompts, outputs, logs, or training-derived responses.</td>
+    <td>NIST AI RMF, NIST SP 800-53, OWASP LLM Top 10, FedRAMP-style controls</td>
+    <td>Privacy, secrets management, data protection, leakage testing, output monitoring</td>
+    <td>Privacy review, leakage test results, vendor training terms, DLP review, prohibited data guidance</td>
+  </tr>
+  <tr>
+    <td>AI-R-013</td>
+    <td>Document and evaluate material model-building decisions that may change model behavior, security posture, or evaluation validity.</td>
+    <td>NIST AI RMF, NIST SP 800-53, internal change management policy</td>
+    <td>Change management, evaluation, model lifecycle governance, configuration control</td>
+    <td>Model version record, fine-tuning notes, quantization documentation, regression test results, approval record</td>
+  </tr>
+  <tr>
+    <td>AI-R-014</td>
+    <td>Assess inherited risks from base models, pre-trained models, vendor models, and fine-tuned derivatives before approval or expanded use.</td>
+    <td>NIST AI RMF, OWASP LLM Top 10, vendor risk management, internal AI governance policy</td>
+    <td>Model inheritance, fine-tuning risk, prompt injection susceptibility, vendor assurance</td>
+    <td>Base model documentation, fine-tuning dataset review, model evaluation results, misuse testing, model card</td>
+  </tr>
+  <tr>
+    <td>AI-R-015</td>
+    <td>Recognize and document the limits of direct model auditability and compensate with testing, monitoring, documentation, and governance controls.</td>
+    <td>NIST AI RMF, NIST SP 800-53, internal risk management policy</td>
+    <td>Model transparency, evaluation limits, monitoring, human oversight, residual risk acceptance</td>
+    <td>Evaluation report, monitoring plan, known limitations, risk acceptance record, model card review</td>
   </tr>
   <tr>
     <td>Enter risk ID</td>
@@ -342,12 +514,12 @@ Residual risks that remain after treatment should be formally accepted by the ap
     <td>Example</td>
   </tr>
   <tr>
-    <td>Enter risk ID</td>
-    <td>Enter low, moderate, high, or critical.</td>
-    <td>Explain why the remaining risk is acceptable, what limits apply, and what compensating controls are in place.<br><br></td>
-    <td>Enter approving owner, executive, or governance body.</td>
-    <td>Enter review date.</td>
-    <td>Open, accepted, expired, or superseded.</td>
+    <td>AI-R-015</td>
+    <td>Moderate</td>
+    <td>Residual risk is accepted because direct inspection of model weights is not feasible. Approval is conditioned on documented limitations, behavioral testing, monitoring, human oversight, and periodic reassessment.</td>
+    <td>Risk owner or AI governance lead</td>
+    <td>Enter next review date</td>
+    <td>Example</td>
   </tr>
   <tr>
     <td>Enter risk ID</td>
@@ -393,11 +565,11 @@ The review history should show when the register was created, reviewed, revised,
     <td>Vendor documentation</td>
   </tr>
   <tr>
-    <td>Enter review date</td>
-    <td>Enter reviewer name or role.</td>
-    <td>Summarize the change, approval, rejection, escalation, or review decision.</td>
-    <td>Document relevant assumptions, follow-up items, control changes, unresolved concerns, or approval conditions.<br><br></td>
-    <td>Enter evidence, ticket, document, meeting note, or approval reference.</td>
+    <td>2026-05-29</td>
+    <td>AI governance lead</td>
+    <td>Model provenance and opacity risks added</td>
+    <td>Additional risks were added to account for training data provenance, embedded sensitive data, model modification, inherited model risk, and the limits of direct model auditability.</td>
+    <td>Risk register update</td>
   </tr>
   <tr>
     <td>Enter review date</td>
