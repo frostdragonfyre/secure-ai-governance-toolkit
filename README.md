@@ -1,11 +1,5 @@
 # Secure AI Governance Toolkit
 
-A practical toolkit for turning AI policy into reviewable evidence, repeatable controls, and operational workflows.
-
-Most AI governance material explains what organizations *should* care about. This project focuses on what teams can actually use: templates, review rubrics, and security checklists that help teams govern AI systems in the real world.
-
-> **Project status:** Early but real. Five templates are shipped and usable today; control mappings, additional templates, and worked examples are on the roadmap below. This is built in the open — what's marked **Shipped** works now.
-
 **AI governance should produce evidence, not just intent.**
 
 ## What this toolkit helps you do
