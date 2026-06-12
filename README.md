@@ -1,6 +1,12 @@
 # Secure AI Governance Toolkit
 
-**AI governance should produce evidence, not just intent.**
+AI governance should produce evidence, not just intent.
+
+The Secure AI Governance Toolkit is a practical collection of templates, workflows, and review artifacts for evaluating AI systems, AI-enabled business processes, and AI vendors before and after deployment.
+
+It is designed to help teams turn AI policy into reviewable evidence, repeatable controls, and operational decision records.
+
+---
 
 ## What this toolkit helps you do
 
@@ -10,6 +16,9 @@
 - Map AI risks to security, compliance, and governance frameworks
 - Build repeatable approval workflows for AI use cases
 - Create evidence for audits, security reviews, and executive oversight
+- Record AI governance decisions with owners, controls, residual risks, and re-review triggers
+
+---
 
 ## Who this is for
 
@@ -20,6 +29,8 @@
 - Executives who need evidence-based AI risk visibility
 - Smaller organizations that need practical governance without buying a full platform
 
+---
+
 ## Why this exists
 
 AI governance often fails when it stays at the policy level. Organizations may have principles, acceptable-use rules, or risk statements, but still lack a practical way to answer basic operational questions:
@@ -29,92 +40,140 @@ AI governance often fails when it stays at the policy level. Organizations may h
 - What risks were reviewed?
 - What controls are required?
 - What evidence supports the approval decision?
+- Who accepted the residual risk?
 - What happens if the model, vendor, data, or use case changes?
 - How do we respond if the system causes harm or exposes sensitive information?
 
-This toolkit answers those questions with artifacts a team can fill out, attach to a decision, and hand to an auditor.
+This toolkit answers those questions with artifacts a team can fill out, attach to a decision, and hand to an auditor, reviewer, risk committee, or executive sponsor.
+
+---
 
 ## Recommended workflow
 
-A repeatable review process for AI systems, vendors, models, and use cases. Links point to shipped artifacts; *(planned)* items are on the roadmap.
+A repeatable review process for AI systems, vendors, models, and use cases.
+
+Links point to shipped artifacts. Planned items are on the roadmap.
 
 ### 1. Intake
+
 Capture the basic facts: business purpose, ownership, users, data types, model/vendor, deployment environment, expected outputs, and known regulatory concerns.
-→ [`templates/ai-use-case-intake.md`](templates/ai-use-case-intake.md)
+
+Artifact: [AI use case intake](templates/ai-use-case-intake.md)
+
+---
 
 ### 2. Classify risk
-Identify higher-risk characteristics: sensitive or regulated data, external-facing output, decisions affecting people, autonomous actions, third-party models, lack of human review.
-→ [`templates/ai-risk-register.md`](templates/ai-risk-register.md) · risk-classification guide *(planned)*
+
+Identify higher-risk characteristics such as sensitive or regulated data, external-facing output, decisions affecting people, autonomous actions, third-party models, lack of human review, or unclear ownership.
+
+Artifact: [AI risk register](templates/ai-risk-register.md)
+
+Planned: AI risk classification guide
+
+---
 
 ### 3. Review controls
-Evaluate safeguards: data protection, access control, output validation, human oversight, logging, security testing, and misuse scenarios.
-→ [`templates/model-evaluation-rubric.md`](templates/model-evaluation-rubric.md) · [`templates/ai-security-review-checklist.md`](templates/ai-security-review-checklist.md) · threat model, prompt/config review, vendor questionnaire *(planned)*
+
+Evaluate safeguards such as data protection, access control, output validation, human oversight, logging, security testing, vendor dependencies, misuse scenarios, and prompt injection risk.
+
+Artifacts:
+
+- [Model evaluation rubric](templates/model-evaluation-rubric.md)
+- [AI security review checklist](templates/ai-security-review-checklist.md)
+
+Planned:
+
+- AI threat model template
+- Prompt and configuration review
+- Vendor AI review questionnaire
+
+---
 
 ### 4. Create evidence
-Produce documentation supporting the decision: model purpose, limitations, controls, and framework mappings.
-→ [`templates/model-card.md`](templates/model-card.md) · decision record, framework crosswalks *(planned)*
+
+Produce documentation supporting the decision: model purpose, intended use, limitations, evaluation results, controls, known risks, and framework mappings.
+
+Artifact: [Model card](templates/model-card.md)
+
+Planned: Framework crosswalks
+
+---
 
 ### 5. Decide
-Record the outcome (Approved / Approved with conditions / Deferred / Rejected), naming the decision owner, risk owner, required controls, review date, and change triggers.
-→ AI governance decision record *(planned)*
+
+Record the outcome: Approved, Approved with Conditions, Deferred, or Rejected.
+
+The decision record should name the decision owner, risk owner, required controls, residual risks, approval conditions, review date, and change triggers.
+
+Artifact: [AI governance decision record](templates/ai-governance-decision-record.md)
+
+---
 
 ### 6. Monitor and revisit
-Governance is not a one-time approval. Reassess on material change — new model version, new data source, new user group, expanded permissions, production rollout, security incident, or regulatory change. Change triggers are captured in the intake template so there's something to monitor against.
-→ AI incident response playbook, evidence guide *(planned)*
+
+Governance is not a one-time approval. Reassess when there is material change, including:
+
+- New model or model version
+- New vendor or hosting environment
+- New data source
+- New user group
+- Expanded permissions or tool access
+- External-facing use
+- Material change in output use
+- Security incident
+- Privacy incident
+- Legal, regulatory, or contractual change
+- Significant failure in evaluation or monitoring
+
+Planned:
+
+- AI incident response playbook
+- Evidence guide
+- Governance workflow guide
+
+---
 
 ## Core toolkit
 
-**Status:** `Shipped` = usable now · `Planned` = on the roadmap, not yet in the repo
+Status: `Shipped` = usable now · `Planned` = on the roadmap, not yet in the repo
 
 | Phase | Artifact | Status |
 |---|---|---|
-| Intake | [AI use case intake](templates/ai-use-case-intake.md) | ✅ Shipped |
-| Risk | [AI risk register](templates/ai-risk-register.md) | ✅ Shipped |
-| Risk | AI risk classification guide | ⏳ Planned |
-| Model governance | [Model card](templates/model-card.md) | ✅ Shipped |
-| Evaluation | [Model evaluation rubric](templates/model-evaluation-rubric.md) | ✅ Shipped |
-| Security review | [AI security review checklist](templates/ai-security-review-checklist.md) | ✅ Shipped |
-| Security review | AI threat model template | ⏳ Planned |
-| Vendor governance | Vendor AI review questionnaire | ⏳ Planned |
-| Prompt governance | Prompt and configuration review | ⏳ Planned |
-| Supply chain | Model supply chain & provenance review | ⏳ Planned |
-| Decision | AI governance decision record | ⏳ Planned |
-| Incident response | AI incident response playbook | ⏳ Planned |
-| Control mapping | Framework crosswalks (NIST AI RMF, OWASP LLM Top 10, ISO 42001, SOC 2) | ⏳ Planned |
-| Examples | Completed internal copilot review | ⏳ Planned |
-| Examples | Completed vendor SaaS review | ⏳ Planned |
+| Intake | [AI use case intake](templates/ai-use-case-intake.md) | Shipped |
+| Risk | [AI risk register](templates/ai-risk-register.md) | Shipped |
+| Risk | AI risk classification guide | Planned |
+| Model governance | [Model card](templates/model-card.md) | Shipped |
+| Evaluation | [Model evaluation rubric](templates/model-evaluation-rubric.md) | Shipped |
+| Security review | [AI security review checklist](templates/ai-security-review-checklist.md) | Shipped |
+| Security review | AI threat model template | Planned |
+| Vendor governance | Vendor AI review questionnaire | Planned |
+| Prompt governance | Prompt and configuration review | Planned |
+| Supply chain | Model supply chain and provenance review | Planned |
+| Decision | [AI governance decision record](templates/ai-governance-decision-record.md) | Shipped |
+| Incident response | AI incident response playbook | Planned |
+| Control mapping | Framework crosswalks: NIST AI RMF, OWASP LLM Top 10, ISO 42001, SOC 2 | Planned |
+| Examples | Completed internal copilot review | Planned |
+| Examples | Completed vendor SaaS review | Planned |
+
+---
 
 ## Repository structure
 
 ```text
 secure-ai-governance-toolkit/
 ├── templates/
-│   ├── ai-use-case-intake.md            # shipped
-│   ├── ai-risk-register.md              # shipped
-│   ├── ai-security-review-checklist.md  # shipped
-│   ├── model-card.md                    # shipped
-│   └── model-evaluation-rubric.md       # shipped
-├── docs/        # planned: getting-started, governance-workflow, risk-classification, evidence-guide, glossary
-├── mappings/    # planned: NIST AI RMF, OWASP LLM Top 10, ISO 42001, SOC 2 crosswalks
-├── examples/    # planned: completed internal-copilot and vendor-SaaS reviews
+│   ├── ai-use-case-intake.md
+│   ├── ai-risk-register.md
+│   ├── ai-security-review-checklist.md
+│   ├── ai-governance-decision-record.md
+│   ├── model-card.md
+│   └── model-evaluation-rubric.md
+├── docs/
+│   └── planned: getting-started, governance-workflow, risk-classification, evidence-guide, glossary
+├── mappings/
+│   └── planned: NIST AI RMF, OWASP LLM Top 10, ISO 42001, SOC 2 crosswalks
+├── examples/
+│   └── planned: completed internal-copilot and vendor-SaaS reviews
 ├── assets/
 ├── README.md
 └── LICENSE
-```
-
-## Roadmap
-
-Near-term priorities, in order:
-
-1. One complete **worked example** in `examples/` — a fully filled review of a realistic system, including the judgment behind the decision. (Highest priority: it's what makes the toolkit demonstrate governance rather than just describe it.)
-2. **Framework crosswalks** in `mappings/`, starting with one done precisely rather than four done broadly.
-3. Remaining workflow templates: decision record, threat model, vendor questionnaire.
-4. `docs/` guides tying the workflow together.
-
-## Contributing
-
-Issues and suggestions are welcome via the issue tracker.
-
-## License
-
-See [LICENSE](LICENSE).
