@@ -14,6 +14,8 @@ Then open the [use case intake](templates/ai-use-case-intake.md), identify an ow
 
 For related teaching and essays, visit [mycalbrown.com](https://mycalbrown.com/). My [Pluralsight courses](https://www.pluralsight.com/authors/mycal-brown) explore cloud cost ownership and governance.
 
+The [FinOps Learning Lab](https://github.com/frostdragonfyre/finops-learning-lab) adds synthetic exercises on cost ownership and AI cost per useful result.
+
 ---
 
 ## What this toolkit helps you do
