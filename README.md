@@ -6,6 +6,14 @@ The Secure AI Governance Toolkit is a practical collection of templates, workflo
 
 It is designed to help teams turn AI policy into reviewable evidence, repeatable controls, and operational decision records.
 
+## Start with a worked example
+
+Read the [Internal Policy Copilot Review](examples/internal-copilot-review.md) to see how the artifacts fit together. It uses fictional policies, results, and decisions for teaching; it is not evidence of a deployed system or a validated assessment.
+
+Then open the [use case intake](templates/ai-use-case-intake.md), identify an owner and scope, and follow the workflow below. You can read and adapt the Markdown templates without running code or connecting an AI service.
+
+For related teaching and essays, visit [mycalbrown.com](https://mycalbrown.com/). My [Pluralsight courses](https://www.pluralsight.com/authors/mycal-brown) explore cloud cost ownership and governance.
+
 ---
 
 ## What this toolkit helps you do
@@ -152,7 +160,7 @@ Status: `Shipped` = usable now · `Planned` = on the roadmap, not yet in the rep
 | Decision | [AI governance decision record](templates/ai-governance-decision-record.md) | Shipped |
 | Incident response | AI incident response playbook | Planned |
 | Control mapping | Framework crosswalks: NIST AI RMF, OWASP LLM Top 10, ISO 42001, SOC 2 | Planned |
-| Examples | Completed internal copilot review | Planned |
+| Examples | [Completed internal copilot review](examples/internal-copilot-review.md) | Shipped |
 | Examples | Completed vendor SaaS review | Planned |
 
 ---
@@ -173,7 +181,9 @@ secure-ai-governance-toolkit/
 ├── mappings/
 │   └── planned: NIST AI RMF, OWASP LLM Top 10, ISO 42001, SOC 2 crosswalks
 ├── examples/
-│   └── planned: completed internal-copilot and vendor-SaaS reviews
+│   ├── internal-copilot-review.md
+│   └── planned: completed vendor-SaaS review
 ├── assets/
 ├── README.md
 └── LICENSE
+```
